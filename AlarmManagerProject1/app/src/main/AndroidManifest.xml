@@ -4,15 +4,15 @@
 	<uses-sdk android:minSdkVersion="10" />
 
 	<application android:icon="@drawable/icon" android:label="@string/app_name">
-		<activity android:name=".MyAlarmManager" android:label="@string/app_name">
-			<intent-filter>
+		<activity android:name=".MyAlarmManager" android:label="@string/app_name">// 定义Activity程序
+			<intent-filter>//默认执行
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity android:name=".AlarmMessage" />
+		<activity android:name=".AlarmMessage" />//配置Activity程序类
 		<receiver android:name="MyAlarmReceiver" android:enabled="true"
-			android:process=":remote">
+			android:process=":remote">//配置广播器
 			<intent-filter>
 				<action android:name="org.alarm.action.setalarm" />
 			</intent-filter>
