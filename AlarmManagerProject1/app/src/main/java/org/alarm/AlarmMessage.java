@@ -13,20 +13,20 @@ public class AlarmMessage extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		new AlertDialog.Builder(this)
-				.setIcon(R.drawable.pic_m)
-				.setTitle("ÄÖÖÓÊ±¼äÒÑµ½£¡")
-				.setMessage(
-						"ÄÖÖÓÏìÆğ£¬ÏÖÔÚÊ±¼ä£º"
-								+ new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ HHÊ±mm·ÖssÃë")
+		new AlertDialog.Builder(this)//å»ºç«‹å¯¹è¯æ¡†
+				.setIcon(R.drawable.pic_m)//è®¾ç½®å›¾æ ‡
+				.setTitle("é—¹é’Ÿæ—¶é—´å·²åˆ°ï¼")//è®¾ç½®å¯¹è¯æ¡†æ ‡é¢˜
+				.setMessage(           //å®šä¹‰æ˜¾ç¤ºçš„æ–‡å­—
+						"é—¹é’Ÿå“èµ·ï¼Œç°åœ¨æ—¶é—´ï¼š"
+								+ new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥ HHæ—¶mmåˆ†ssç§’")
 										.format(new Date()))
-				.setPositiveButton("¹Ø±Õ", new DialogInterface.OnClickListener() {
+				.setPositiveButton("å…³é—­", new DialogInterface.OnClickListener() {
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						AlarmMessage.this.finish();
+						AlarmMessage.this.finish();//å…³é—­å¯¹è¯æ¡†åç¨‹åºç»“æŸ
 					}
-				}).show();
+				}).show();//æ˜¾ç¤ºå¯¹è¯æ¡†
 	}
 
 }
