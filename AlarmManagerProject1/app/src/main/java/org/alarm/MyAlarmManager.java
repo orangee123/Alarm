@@ -38,7 +38,7 @@ public class MyAlarmManager extends Activity {
 		this.alarm = (AlarmManager) super.getSystemService(Context.ALARM_SERVICE) ;//取得闹钟服务
 		this.set.setOnClickListener(new SetOnClickListener()) ;
 		this.delete.setOnClickListener(new DeleteOnClickListener()) ;
-		this.time.setIs24HourView(true) ;
+		this.time.setIs24HourView(true) ;//24小时制
 		this.time.setOnTimeChangedListener(new OnTimeChangedListenerImpl()) ;//设置时间改变监听
 		
 	}
